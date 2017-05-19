@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">androidtest</string>
+    <string name="menuheadtitle">select operation</string>
+    <string name="deleteoperation">delete</string>
+    <string name="canceloperation">cancel</string>
+    <string name="menuSettingsValue">settings</string>
 </resources>
