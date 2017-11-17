@@ -1,4 +1,4 @@
-package com.example.jhan.androidtest;
+package com.xiaoxiukj.jhan.androidtest;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

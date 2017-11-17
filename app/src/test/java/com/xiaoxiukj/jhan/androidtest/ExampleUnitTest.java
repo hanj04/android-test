@@ -1,4 +1,4 @@
-package com.example.jhan.androidtest;
+package com.xiaoxiukj.jhan.androidtest;
 
 import org.junit.Test;
 

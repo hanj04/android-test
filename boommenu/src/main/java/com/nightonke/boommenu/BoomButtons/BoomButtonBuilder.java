@@ -396,7 +396,7 @@ public abstract class BoomButtonBuilder<T> {
     /**
      * Set the rect of image.
      * By this method, you can set the position and size of the image-view in boom-button.
-     * For example, builder.imageRect(new Rect(0, 50, 100, 100)) will make the
+     * For xiaoxiukj, builder.imageRect(new Rect(0, 50, 100, 100)) will make the
      * image-view's size to be 100 * 50 and margin-top to be 50 pixel.
      * <br><br>
      * <STRONG>Synchronicity:</STRONG> If the boom-button existed,

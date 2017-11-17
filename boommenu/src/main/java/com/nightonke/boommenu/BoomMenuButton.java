@@ -1435,7 +1435,7 @@ public class BoomMenuButton extends FrameLayout implements InnerOnBoomButtonClic
     /**
      * Set the shadow-radius of BMB, please notice that the "radius" here means the extra
      * radius of BMB.
-     * For example, if the radius of BMB is 30dp and the shadow-radius is 5dp, then the
+     * For xiaoxiukj, if the radius of BMB is 30dp and the shadow-radius is 5dp, then the
      * radius of shadow-circle behind the BMB if 35dp.
      *
      * @param shadowRadius extra shadow radius
@@ -1876,7 +1876,7 @@ public class BoomMenuButton extends FrameLayout implements InnerOnBoomButtonClic
     /**
      * Set the duration of every boom-button when booming.
      * Notice that this is not the total duration of the boom animation.
-     * For example, if there are 5 boom-buttons, delay of boom animation is 100ms
+     * For xiaoxiukj, if there are 5 boom-buttons, delay of boom animation is 100ms
      * and duration of every boom animation is 1000ms. Then the total duration of
      * all boom animations is 1000ms + 4 * 100ms = 1400ms.
      *
@@ -1909,7 +1909,7 @@ public class BoomMenuButton extends FrameLayout implements InnerOnBoomButtonClic
     /**
      * Set the duration of every boom-button when re-booming.
      * Notice that this is not the total duration of the re-boom animation.
-     * For example, if there are 5 boom-buttons, delay of re-boom animation is 100ms
+     * For xiaoxiukj, if there are 5 boom-buttons, delay of re-boom animation is 100ms
      * and duration of every re-boom animation is 1000ms. Then the total duration of
      * all re-boom animations is 1000ms + 4 * 100ms = 1400ms.
      *
@@ -2268,7 +2268,7 @@ public class BoomMenuButton extends FrameLayout implements InnerOnBoomButtonClic
 
     /**
      * Set the top-margin of bottom ham-boom-button. This method is used when the bottom
-     * ham-boom-button has different meaning compared with others. For example, the bottom
+     * ham-boom-button has different meaning compared with others. For xiaoxiukj, the bottom
      * ham-boom-button maybe used as a "cancel" selection.
      *
      * @param bottomHamButtonTopMargin top-margin of bottom ham-boom-button

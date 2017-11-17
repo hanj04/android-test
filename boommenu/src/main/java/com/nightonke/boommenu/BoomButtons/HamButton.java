@@ -395,7 +395,7 @@ public class HamButton extends BoomButton {
         /**
          * Set the rect of sub-text.
          * By this method, you can set the position and size of the sub-text-view in boom-button.
-         * For example, builder.textRect(new Rect(0, 50, 100, 100)) will make the
+         * For xiaoxiukj, builder.textRect(new Rect(0, 50, 100, 100)) will make the
          * sub-text-view's size to be 100 * 50 and margin-top to be 50 pixel.
          * <br><br>
          * <STRONG>Synchronicity:</STRONG> If the boom-button existed,
@@ -465,7 +465,7 @@ public class HamButton extends BoomButton {
         /**
          * Set the gravity of sub-text-view.
          *
-         * @param subTextGravity gravity, for example, Gravity.CENTER
+         * @param subTextGravity gravity, for xiaoxiukj, Gravity.CENTER
          * @return the builder
          */
         public Builder subTextGravity(int subTextGravity) {

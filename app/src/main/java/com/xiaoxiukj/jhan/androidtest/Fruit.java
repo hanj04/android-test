@@ -1,4 +1,4 @@
-package com.example.jhan.androidtest;
+package com.xiaoxiukj.jhan.androidtest;
 
 /**
  * Created by jhan on 5/18/17.

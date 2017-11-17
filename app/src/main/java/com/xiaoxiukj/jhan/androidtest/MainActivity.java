@@ -1,34 +1,71 @@
-package com.example.jhan.androidtest;
+package com.xiaoxiukj.jhan.androidtest;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.drawable.BitmapDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ListView;
+import android.widget.ImageView;
+
+import android.graphics.Bitmap;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CircleCrop;
+import com.bumptech.glide.request.RequestOptions;
+
+import com.nightonke.boommenu.BoomButtons.ButtonPlaceEnum;
+import com.nightonke.boommenu.BoomButtons.SimpleCircleButton;
+import com.nightonke.boommenu.BoomMenuButton;
+import com.nightonke.boommenu.ButtonEnum;
+import com.nightonke.boommenu.Piece.PiecePlaceEnum;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private List<Fruit> fruitList = new ArrayList<Fruit>();
+    private BoomMenuButton bmb;
     FruitAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initFruits();
-        adapter = new FruitAdapter(MainActivity.this, R.layout.fruit_item, fruitList);
-        ListView listView = (ListView) findViewById(R.id.list_view);
-        listView.setAdapter(adapter);
-        super.registerForContextMenu(listView);
+//        initFruits();
+//        adapter = new FruitAdapter(MainActivity.this, R.layout.fruit_item, fruitList);
+//        ListView listView = (ListView) findViewById(R.id.list_view);
+//        listView.setAdapter(adapter);
+//        super.registerForContextMenu(listView);
+
+        ImageView img = (ImageView) findViewById(R.id.image_view);
+        Bitmap bitmap = ((BitmapDrawable) getResources().getDrawable(
+                R.drawable.app)).getBitmap();
+        int w = bitmap.getWidth(), h = bitmap.getHeight();
+        int[] pix = new int[w * h];
+        bitmap.getPixels(pix, 0, w, 0, 0, w, h);
+        int [] resultPixes=OpenCVHelper.gray(pix,w,h);
+        Log.d("my error", "here");
+        Bitmap result = Bitmap.createBitmap(w,h, Bitmap.Config.RGB_565);
+        result.setPixels(resultPixes, 0, w, 0, 0,w, h);
+//        img.setImageBitmap(result);
+        Glide.with(this).load(R.drawable.app).apply(RequestOptions.bitmapTransform(new CircleCrop())).into(img);
+
+        bmb = (BoomMenuButton) findViewById(R.id.bmb);
+        assert bmb != null;
+        bmb.setButtonEnum(ButtonEnum.SimpleCircle);
+        bmb.setPiecePlaceEnum(PiecePlaceEnum.DOT_2_1);
+        bmb.setButtonPlaceEnum(ButtonPlaceEnum.SC_2_1);
+//        bmb.addBuilder(BuilderManager.getSimpleCircleButtonBuilder());
+        bmb.addBuilder(new SimpleCircleButton.Builder().normalImageRes(R.drawable.bat));
+
 
     }
 

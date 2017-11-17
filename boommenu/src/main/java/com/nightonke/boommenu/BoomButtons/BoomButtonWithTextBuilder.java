@@ -269,7 +269,7 @@ public abstract class BoomButtonWithTextBuilder<T> extends BoomButtonBuilder<T> 
     /**
      * Set the rect of text.
      * By this method, you can set the position and size of the text-view in boom-button.
-     * For example, builder.textRect(new Rect(0, 50, 100, 100)) will make the
+     * For xiaoxiukj, builder.textRect(new Rect(0, 50, 100, 100)) will make the
      * text-view's size to be 100 * 50 and margin-top to be 50 pixel.
      * <br><br>
      * <STRONG>Synchronicity:</STRONG> If the boom-button existed,
@@ -339,7 +339,7 @@ public abstract class BoomButtonWithTextBuilder<T> extends BoomButtonBuilder<T> 
     /**
      * Set the gravity of text-view.
      *
-     * @param gravity gravity, for example, Gravity.CENTER
+     * @param gravity gravity, for xiaoxiukj, Gravity.CENTER
      * @return the builder
      */
     public T textGravity(int gravity) {
